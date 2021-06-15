@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>作用域 | 前端记录之路</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="专注前端技术栈分享记录">
+    <link rel="preload" href="/assets/css/0.styles.4fdd343e.css" as="style"><link rel="preload" href="/assets/js/app.6dbf240b.js" as="script"><link rel="preload" href="/assets/js/2.a990b21c.js" as="script"><link rel="preload" href="/assets/js/27.e8ceccaa.js" as="script"><link rel="prefetch" href="/assets/js/10.10c0b5aa.js"><link rel="prefetch" href="/assets/js/11.3d7f1001.js"><link rel="prefetch" href="/assets/js/12.e8ec263c.js"><link rel="prefetch" href="/assets/js/13.ccc4137c.js"><link rel="prefetch" href="/assets/js/14.17b7d498.js"><link rel="prefetch" href="/assets/js/15.a7d048e8.js"><link rel="prefetch" href="/assets/js/16.a4913ef6.js"><link rel="prefetch" href="/assets/js/17.72bfbdcb.js"><link rel="prefetch" href="/assets/js/18.77bc7de8.js"><link rel="prefetch" href="/assets/js/19.9f1eadf5.js"><link rel="prefetch" href="/assets/js/20.fc15fe08.js"><link rel="prefetch" href="/assets/js/21.6e5b9451.js"><link rel="prefetch" href="/assets/js/22.392cbf89.js"><link rel="prefetch" href="/assets/js/23.fd5708cf.js"><link rel="prefetch" href="/assets/js/24.8950b600.js"><link rel="prefetch" href="/assets/js/25.47fd4ae1.js"><link rel="prefetch" href="/assets/js/26.2d40bd1f.js"><link rel="prefetch" href="/assets/js/28.a88700d4.js"><link rel="prefetch" href="/assets/js/29.0f7738cb.js"><link rel="prefetch" href="/assets/js/3.da29dc3e.js"><link rel="prefetch" href="/assets/js/30.cbee3d24.js"><link rel="prefetch" href="/assets/js/31.1f03f940.js"><link rel="prefetch" href="/assets/js/32.25d8d086.js"><link rel="prefetch" href="/assets/js/33.416b6187.js"><link rel="prefetch" href="/assets/js/34.e5029e70.js"><link rel="prefetch" href="/assets/js/35.37a18c1c.js"><link rel="prefetch" href="/assets/js/4.1d9f8102.js"><link rel="prefetch" href="/assets/js/5.20b2e9c6.js"><link rel="prefetch" href="/assets/js/6.15bd08c2.js"><link rel="prefetch" href="/assets/js/7.fc57a01a.js"><link rel="prefetch" href="/assets/js/8.f2ae2ae7.js"><link rel="prefetch" href="/assets/js/9.771cbd28.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4fdd343e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端记录之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fontend/js/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/fontend/js/array-compare.html" class="sidebar-link">比较两个数组</a></li><li><a href="/fontend/js/array-methods.html" class="sidebar-link">JS数组中的一些实用方法</a></li><li><a href="/fontend/js/closure.html" class="sidebar-link">闭包</a></li><li><a href="/fontend/js/cookies-localStorage-sessionStorage.html" class="sidebar-link">本地存储</a></li><li><a href="/fontend/js/inherit.html" class="sidebar-link">继承</a></li><li><a href="/fontend/js/methods.html" class="sidebar-link">js一些方法</a></li><li><a href="/fontend/js/prototype.html" class="sidebar-link">图解原型和原型链</a></li><li><a href="/fontend/js/scope.html" aria-current="page" class="active sidebar-link">作用域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fontend/js/scope.html#作用域-scope" class="sidebar-link">作用域(Scope)</a></li><li class="sidebar-sub-header"><a href="/fontend/js/scope.html#作用域链" class="sidebar-link">作用域链</a></li><li class="sidebar-sub-header"><a href="/fontend/js/scope.html#作用域与执行上下文" class="sidebar-link">作用域与执行上下文</a></li><li class="sidebar-sub-header"><a href="/fontend/js/scope.html#产生闭包的根本原因是作用域链" class="sidebar-link">产生闭包的根本原因是作用域链</a></li></ul></li><li><a href="/fontend/js/shallow-deep-copy.html" class="sidebar-link">js深拷贝&amp;浅拷贝</a></li><li><a href="/fontend/js/this.html" class="sidebar-link">this指向</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="javascript作用域和作用域链"><a href="#javascript作用域和作用域链" class="header-anchor">#</a> JavaScript作用域和作用域链</h3> <div><ul><li><a href="/fontend/js/scope.html#javascript作用域和作用域链">JavaScript作用域和作用域链</a></li><li><a href="/fontend/js/scope.html#作用域-scope">作用域(Scope)</a><ul><li><a href="/fontend/js/scope.html#_1-什么是作用域">1.什么是作用域</a></li><li><a href="/fontend/js/scope.html#_2-全局作用域和函数作用域">2.全局作用域和函数作用域</a></li><li><a href="/fontend/js/scope.html#_3-块级作用域">3.块级作用域</a></li></ul></li><li><a href="/fontend/js/scope.html#作用域链">作用域链</a></li><li><a href="/fontend/js/scope.html#作用域与执行上下文">作用域与执行上下文</a></li><li><a href="/fontend/js/scope.html#产生闭包的根本原因是作用域链">产生闭包的根本原因是作用域链</a></li></ul></div> <h2 id="作用域-scope"><a href="#作用域-scope" class="header-anchor">#</a> 作用域(Scope)</h2> <h3 id="_1-什么是作用域"><a href="#_1-什么是作用域" class="header-anchor">#</a> 1.什么是作用域</h3> <p>作用域是在运行时代码中的某些特定部分的变量、函数和对象的可访问性。也就是，作用域决定了代码区块中的变量和其他资源的可见性。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> innerVariable <span class="token operator">=</span> <span class="token string">'inner'</span>
+<span class="token punctuation">}</span>
+<span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'innerVariable'</span><span class="token punctuation">,</span> innerVariable<span class="token punctuation">)</span> <span class="token comment">// Uncaught ReferenceError: innerVariable is not defined</span>
+</code></pre></div><p>从上面的例子可以体会到作用域的概念，变量innerVariable在全局作用域没有声明，所以在全局作用域下取值会报错。我们可以这样理解：作用域就是一个独立的地盘，让变量不会外泄、暴露出去。也就是说作用域最大的用处就是隔离变量，不同作用域下同名变量不会有冲突。</p> <p>ES6之前JavaScript没有块级作用域，只有全局作用域和函数作用域。ES6的到来，为我们提供了'块级作用域'，可通过let和const体现。</p> <h3 id="_2-全局作用域和函数作用域"><a href="#_2-全局作用域和函数作用域" class="header-anchor">#</a> 2.全局作用域和函数作用域</h3> <p>在代码中任何地方都能访问到的对象拥有全局作用域，一般来说以下几种情形拥有全局作用域:</p> <ul><li>最外层函数和在最外层函数外面定义的变量拥有全局作用域</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> outVaraible <span class="token operator">=</span> <span class="token string">'最外层变量'</span> <span class="token comment">// 最外层变量</span>
+<span class="token keyword">function</span> <span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 最外层函数</span>
+  <span class="token keyword">var</span> inVaraible <span class="token operator">=</span> <span class="token string">'内层变量'</span> <span class="token comment">// 内层变量</span>
+  <span class="token keyword">function</span> <span class="token function">innerFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 内层函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'inVaraible'</span><span class="token punctuation">,</span> inVaraible<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">innerFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>outVaraible<span class="token punctuation">)</span> <span class="token comment">// 最外层变量</span>
+<span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 内层变量</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>inVaraible<span class="token punctuation">)</span> <span class="token comment">// Uncaught ReferenceError: inVaraible is not defined</span>
+<span class="token function">innerFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Uncaught ReferenceError: innerFun is not defined</span>
+</code></pre></div><ul><li>所有未定义直接赋值的变量自动声明为拥有全局作用域</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">outFun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  varaible <span class="token operator">=</span> <span class="token string">'未定义直接赋值的变量'</span>
+  <span class="token keyword">var</span> innerVaraible <span class="token operator">=</span> <span class="token string">'内层变量'</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">outFun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 要先执行这个函数，否则根本不知道里面是啥</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>varaible<span class="token punctuation">)</span> <span class="token comment">// 未定义直接赋值的变量</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>innerVaraible<span class="token punctuation">)</span> <span class="token comment">// Uncaught ReferenceError: innerVaraible in not defined</span>
+</code></pre></div><ul><li>所有window对象的属性拥有全局作用域</li></ul> <p>一般情况下，window对象的内置属性都拥有全局作用域，例如window.location等等</p> <p>全局作用域有个弊端：如果我们写了很多行JS代码，变量定义都没有用函数包括，那么他们就全部在全局作用域中。这样就会污染全局明明空间，容易引起命名冲突。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 张三写的代码</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">// 李四写的代码</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span>
+</code></pre></div><p>这就是为何jQuery和Zepto等库的源码，所有的代码都放在(fucntion() { ...... })()中。因为放在里面所有的变量，都不会被外泄和暴露出去，不会污染到外面，不会对其他的库或js脚本造成影响。这就是函数作用域的一个体现。</p> <p>函数作用域是指声明在函数内部的变量，和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> inVaraible <span class="token operator">=</span> <span class="token string">'内部变量'</span>
+  <span class="token keyword">function</span> <span class="token function">innerFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>inVaraible<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">innerFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 内部变量</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>inVaraible<span class="token punctuation">)</span> <span class="token comment">// Uncaught ReferenceError: inVaraible in not defined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>innerFun<span class="token punctuation">)</span> <span class="token comment">// Uncaught ReferenceError: innerFun in not defined</span>
+</code></pre></div><p>作用域是分层的，内层作用域可以访问外层作用域，反之则不行。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> inVaraible1 <span class="token operator">=</span> <span class="token string">'内部变量1'</span>
+  <span class="token keyword">function</span> <span class="token function">innerFun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>inVaraible1<span class="token punctuation">)</span>
+    <span class="token keyword">var</span> inVaraible2 <span class="token operator">=</span> <span class="token string">'内部变量2'</span>
+    <span class="token keyword">function</span> <span class="token function">innerFun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>inVaraible2<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">innerFun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">innerFun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">outFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 内部变量1 内部变量2</span>
+</code></pre></div><p>值得注意的是：块语句（大括号&quot;{}&quot;中间的语句），如if 和switch条件语句和while循环语句，不像函数，他们不会创建一个新的作用域。在块语句中定义的变量将保留在他们已经存在的作用域中。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> blog <span class="token operator">=</span> <span class="token string">'csq529'</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>blog<span class="token punctuation">)</span>
+</code></pre></div><h3 id="_3-块级作用域"><a href="#_3-块级作用域" class="header-anchor">#</a> 3.块级作用域</h3> <p>块级作用域可通过let 、const声明，所声明的变量在指定的作用域外无法访问，块级作用域在如下情况被创建。</p> <p>1.在一个函数内部</p> <p>2.在一个代码块(由一对花括号包裹)内部</p> <p>let 声明的语法以var的语法一致，基本可以用let代替var进行声明变量，但会将变量的作用域限制在当前代码块中。块级作用域有以下几个特点：</p> <ul><li>声明变量不会提升到代码块顶部（不会变量提升）</li></ul> <p>let / const声明的变量并不会提升到代码块的顶部，所以需要将let / const 声明的变量放置顶部，以便让变量在整个代码块内部可用。</p> <ul><li>禁止重复声明</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> varible <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">let</span> varible <span class="token operator">=</span> <span class="token number">2</span> <span class="token comment">// Uncaught SyntaxError: Identifier 'varible' has already been declared</span>
+</code></pre></div><ul><li>循环中的绑定块作用域的妙用</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// Uncaught ReferenceError: i is not defined</span>
+</code></pre></div><p>上面的代码中，计数器i只在for循环体内有效，在循环体外引用就会报错。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>上面的代码中，变量i是用var声明的，在全局范围内都有效，所以全局只有一个变量i。每一次循环，变量i的值都会发生改变，而循环内被赋值给数组a的函数内部的console.log(i),里面的i指向的就是全局的i，也就是说，所有数组a的成员里面的i，指向的都是同一个i,导致运行时输出的是最后一轮的i的值，也就是10。</p> <p>如果使用let声明，声明的变量仅在块级作用域内有效，最后输出的是6。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 6</span>
+</code></pre></div><p>上面的代码中，变量i是let声明的，当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量，所以最后输出的是6。你可能会问：如果每一轮循环的变量i都是重新声明的，那它怎么知道上一轮的值，从而计算出本轮循环的值？这是因为JavaScript引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。</p> <p>另外，for循环还有一个特别之处，就是设置循环变量的那部分是一个父作用域，而循环体内部是一个单独的子作用域。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token string">'abc'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// abc</span>
+<span class="token comment">// abc</span>
+<span class="token comment">// abc</span>
+</code></pre></div><p>上面的代码正确运行，输出了3次abc。这表明函数内部的变量i与循环变量i不在同一个作用域，有各自单独的作用域。</p> <h2 id="作用域链"><a href="#作用域链" class="header-anchor">#</a> 作用域链</h2> <p><strong>1.什么是自由变量</strong></p> <p>首先认识一下<strong>自由变量</strong>。以下代码中，console.log(a) 要得到变量a，但是当前作用域中没有定义a，当前作用域没有定义的变量，就成为了自由变量（或者说，凡是跨越了自己作用域的变量就要自由变量），自由变量的值如何得到 —— 向父级作用域寻找（注意：这种说法不严谨，下文会重点解释）。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">200</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 这里的a就是一个自由变量</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>2.什么是作用域链</strong></p> <p>如果父级也没有呢？再一层一层向上找，直到找到全局作用域，这一层一层的关系，就是作用域链。</p> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">100</span>
+ <span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">200</span>
+   <span class="token keyword">function</span> <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token number">300</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 自由变量，顺作用域链向父作用域找</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment">// 自由变量，顺作用域链向父作用域找</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token comment">// 本作用域的变量</span>
+   <span class="token punctuation">}</span>
+   <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+ <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>3.自由变量的取值</strong></p> <p>关于自由变量的值，上文提到要到父级作用域中取，其实有时候这种解释会产生歧义。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token parameter">fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+  <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 10,而不是20</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">show</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span>
+</code></pre></div><p>在函数fn中，取自由变量x的值时，要到哪个作用域中取？——要到创建fn函数的那个作用域中取，<strong>无论fn函数将在哪里创建</strong>。</p> <p>所以，不要在用以上说法了。相比而言，用这句话描述会更加贴切：<strong>要到创建这个函数的那个域，作用域中取值，这里强调的是“创建”而不是“调用”</strong>，切记，其实这就是所谓的“静态作用域”。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">20</span>
+  <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> bar
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">200</span>
+<span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 30</span>
+</code></pre></div><p>fn()返回的是bar函数，赋值给x，执行x()，即执行bar函数代码。取b的值时，直接在fn作用域取出。取a的值时，试图在fn作用域中取，但是取不到，只能转向创建fn的那个作用域中去找，结果找到了，所以最后结果是30。</p> <p>结论：<strong>在创建这个函数的时候，这个函数的作用域就已经决定了，而是不是在调用的时候。</strong></p> <h2 id="作用域与执行上下文"><a href="#作用域与执行上下文" class="header-anchor">#</a> 作用域与执行上下文</h2> <p>许多开发人员经常混淆作用域和执行上下文的概念，误认为他们是相同的概念，但事实并非如此。</p> <p>我们知道JavaScript是解释性语言，JavaScript的执行分为：解释和执行两个阶段，这两个阶段所做的事并不一样。</p> <p><strong>解释阶段</strong></p> <ul><li>词法分析</li> <li>语法分析</li> <li>作用域规则确定</li></ul> <p><strong>执行阶段</strong></p> <ul><li>创建执行上下文</li> <li>执行函数代码</li> <li>垃圾回收</li></ul> <p>JavaScript解释阶段便会确定作用域规则，因此作用域在函数定义时就已经确定了，而不是在函数调用时确定，但是执行上下文是函数执行之前创建的。执行上下文最明显的就是this的指向是执行时确定的。而作用域访问的变量时编写代码的结构确定的。</p> <p>作用域和执行上下文之间最大的区别就是：<strong>执行上下文在运行时确定，随时可能改变；作用域在定义时就确定了，并且不会改变。</strong></p> <p>一个作用域下可能包含若干个上下文环境。有可能从来没有过上下文环境（函数从来没有被调用过）；有可能有过，现在函数被调用完毕后，上下文环境被销毁了；有可能同时存在一个或多个（闭包）。同一个作用域下，不同的调用会产生不同的执行上下文环境，继而产生不同的变量的值。</p> <h2 id="产生闭包的根本原因是作用域链"><a href="#产生闭包的根本原因是作用域链" class="header-anchor">#</a> 产生闭包的根本原因是作用域链</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 闭包是由作用域链引用的
+ * @function expression countNum 匿名函数
+ * @local variable count
+ * @return 匿名函数
+*/</span>
+<span class="token keyword">var</span> <span class="token function-variable function">countNum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 调用countNum的时候返回嵌套的子函数</span>
+    <span class="token keyword">return</span> <span class="token operator">++</span>count <span class="token comment">// count在作用域链内定义，父函数里</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 匿名函数的立即调用，返回嵌套函数</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">countNum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">countNum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">countNum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 3</span>
+</code></pre></div><p>当每次调用<code>countNum</code>函数时，嵌套在该函数内的匿名函数是可以访问父函数的（这里指的是<code>countNum</code>的）作用域的。</p> <p>这就是所谓的闭包，**作用域链是闭包的桥梁，用来连接内部函数与外部函数的关系。**从而达到外部函数访问内部函数局部变量或者函数的目的，其中嵌套的函数就可以称为一个闭包。</p> <p><strong>小结</strong></p> <ul><li>产生闭包的原因是由作用域链引起的；</li> <li>函数嵌套函数，被嵌套的函数就可以称为闭包；</li> <li>子函数可以访问父函数的变量（访问其他函数内部的局部变量）；</li> <li>让变量始终保存在内存中，避免自动垃圾回收；</li> <li>对外提供共有属性和方法。</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fontend/js/prototype.html" class="prev">
+        图解原型和原型链
+      </a></span> <span class="next"><a href="/fontend/js/shallow-deep-copy.html">
+        js深拷贝&amp;浅拷贝
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6dbf240b.js" defer></script><script src="/assets/js/2.a990b21c.js" defer></script><script src="/assets/js/27.e8ceccaa.js" defer></script>
+  </body>
+</html>

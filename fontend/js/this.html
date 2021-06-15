@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>this指向 | 前端记录之路</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="专注前端技术栈分享记录">
+    <link rel="preload" href="/assets/css/0.styles.4fdd343e.css" as="style"><link rel="preload" href="/assets/js/app.6dbf240b.js" as="script"><link rel="preload" href="/assets/js/2.a990b21c.js" as="script"><link rel="preload" href="/assets/js/30.cbee3d24.js" as="script"><link rel="prefetch" href="/assets/js/10.10c0b5aa.js"><link rel="prefetch" href="/assets/js/11.3d7f1001.js"><link rel="prefetch" href="/assets/js/12.e8ec263c.js"><link rel="prefetch" href="/assets/js/13.ccc4137c.js"><link rel="prefetch" href="/assets/js/14.17b7d498.js"><link rel="prefetch" href="/assets/js/15.a7d048e8.js"><link rel="prefetch" href="/assets/js/16.a4913ef6.js"><link rel="prefetch" href="/assets/js/17.72bfbdcb.js"><link rel="prefetch" href="/assets/js/18.77bc7de8.js"><link rel="prefetch" href="/assets/js/19.9f1eadf5.js"><link rel="prefetch" href="/assets/js/20.fc15fe08.js"><link rel="prefetch" href="/assets/js/21.6e5b9451.js"><link rel="prefetch" href="/assets/js/22.392cbf89.js"><link rel="prefetch" href="/assets/js/23.fd5708cf.js"><link rel="prefetch" href="/assets/js/24.8950b600.js"><link rel="prefetch" href="/assets/js/25.47fd4ae1.js"><link rel="prefetch" href="/assets/js/26.2d40bd1f.js"><link rel="prefetch" href="/assets/js/27.e8ceccaa.js"><link rel="prefetch" href="/assets/js/28.a88700d4.js"><link rel="prefetch" href="/assets/js/29.0f7738cb.js"><link rel="prefetch" href="/assets/js/3.da29dc3e.js"><link rel="prefetch" href="/assets/js/31.1f03f940.js"><link rel="prefetch" href="/assets/js/32.25d8d086.js"><link rel="prefetch" href="/assets/js/33.416b6187.js"><link rel="prefetch" href="/assets/js/34.e5029e70.js"><link rel="prefetch" href="/assets/js/35.37a18c1c.js"><link rel="prefetch" href="/assets/js/4.1d9f8102.js"><link rel="prefetch" href="/assets/js/5.20b2e9c6.js"><link rel="prefetch" href="/assets/js/6.15bd08c2.js"><link rel="prefetch" href="/assets/js/7.fc57a01a.js"><link rel="prefetch" href="/assets/js/8.f2ae2ae7.js"><link rel="prefetch" href="/assets/js/9.771cbd28.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4fdd343e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端记录之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fontend/js/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/fontend/js/array-compare.html" class="sidebar-link">比较两个数组</a></li><li><a href="/fontend/js/array-methods.html" class="sidebar-link">JS数组中的一些实用方法</a></li><li><a href="/fontend/js/closure.html" class="sidebar-link">闭包</a></li><li><a href="/fontend/js/cookies-localStorage-sessionStorage.html" class="sidebar-link">本地存储</a></li><li><a href="/fontend/js/inherit.html" class="sidebar-link">继承</a></li><li><a href="/fontend/js/methods.html" class="sidebar-link">js一些方法</a></li><li><a href="/fontend/js/prototype.html" class="sidebar-link">图解原型和原型链</a></li><li><a href="/fontend/js/scope.html" class="sidebar-link">作用域</a></li><li><a href="/fontend/js/shallow-deep-copy.html" class="sidebar-link">js深拷贝&amp;浅拷贝</a></li><li><a href="/fontend/js/this.html" aria-current="page" class="active sidebar-link">this指向</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fontend/js/this.html#理解this的指向" class="sidebar-link">理解this的指向</a></li><li class="sidebar-sub-header"><a href="/fontend/js/this.html#快捷导航" class="sidebar-link">快捷导航</a></li><li class="sidebar-sub-header"><a href="/fontend/js/this.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/fontend/js/this.html#this的四种绑定规则" class="sidebar-link">this的四种绑定规则</a></li><li class="sidebar-sub-header"><a href="/fontend/js/this.html#箭头函数的this指向不会使用上述的四条规则" class="sidebar-link">箭头函数的this指向不会使用上述的四条规则：</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="理解this的指向"><a href="#理解this的指向" class="header-anchor">#</a> 理解this的指向</h2> <h2 id="快捷导航"><a href="#快捷导航" class="header-anchor">#</a> 快捷导航</h2> <div><ul><li><a href="/fontend/js/this.html#理解this的指向">理解this的指向</a></li><li><a href="/fontend/js/this.html#快捷导航">快捷导航</a></li><li><a href="/fontend/js/this.html#前言">前言</a></li><li><a href="/fontend/js/this.html#this的四种绑定规则">this的四种绑定规则</a><ul><li><a href="/fontend/js/this.html#默认绑定">默认绑定</a></li><li><a href="/fontend/js/this.html#隐式绑定">隐式绑定</a></li><li><a href="/fontend/js/this.html#显示绑定">显示绑定</a></li><li><a href="/fontend/js/this.html#new绑定">new绑定</a></li><li><a href="/fontend/js/this.html#this四种绑定规则的优先级">this四种绑定规则的优先级</a></li></ul></li><li><a href="/fontend/js/this.html#箭头函数的this指向不会使用上述的四条规则">箭头函数的this指向不会使用上述的四条规则：</a></li></ul></div> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p><strong>this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象</strong>（这样理解其实是不够全面的，下面会解释）。</p> <h2 id="this的四种绑定规则"><a href="#this的四种绑定规则" class="header-anchor">#</a> this的四种绑定规则</h2> <ul><li><h3 id="默认绑定"><a href="#默认绑定" class="header-anchor">#</a> 默认绑定</h3></li></ul> <p><strong>规则：</strong> 在非严格模式下，默认绑定的<code>this</code>指向全局对象，严格模式下<code>this</code>指向undefined。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+
+<span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">'use strict'</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Uncaught TypeError: Cannot read property 'a' of undefined</span>
+</code></pre></div><p>默认绑定还有一个特殊的地方</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">'use strict'</span>
+  <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 2</span>
+</code></pre></div><p>结论：对于默认绑定来说，<strong>决定this绑定对象的是函数体是否处于严格模式，严格模式指向<code>undefined</code>，非全局指向全局对象<code>window</code></strong></p> <ul><li><h3 id="隐式绑定"><a href="#隐式绑定" class="header-anchor">#</a> 隐式绑定</h3></li></ul> <p><strong>规则：函数在调用的位置，是否有上下文对象，如果有，那么this就隐形绑定到这个对象上。</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">'Oops, global'</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  foo<span class="token operator">:</span> fn1
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">22</span><span class="token punctuation">,</span>
+  obj2<span class="token operator">:</span> obj2
+<span class="token punctuation">}</span>
+
+obj2<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 2 this指向调用函数的对象obj2</span>
+obj1<span class="token punctuation">.</span>obj2<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 2 this指向最后一层调用函数的对象obj2</span>
+
+<span class="token comment">// 隐式绑定丢失</span>
+<span class="token keyword">let</span> bar <span class="token operator">=</span> obj2<span class="token punctuation">.</span>foo <span class="token comment">// bar只是一个函数别名，是obj2.foo的一个引用</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 'Oops, global' this 指向全局对象</span>
+</code></pre></div><p><strong>隐式绑定丢失：实际上就是函数调用时，并没有上下文对象，只是对函数的引用，所以会导致隐形绑定丢失。</strong></p> <p>同样的问题，还发生在传入回调函数中，这种情况更加常见，并且隐蔽，类似:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span>obj2<span class="token punctuation">.</span>foo<span class="token punctuation">)</span> <span class="token comment">// 传入函数的引用，调用时也是没有上下文对象</span>
+</code></pre></div><ul><li><h3 id="显示绑定"><a href="#显示绑定" class="header-anchor">#</a> 显示绑定</h3></li></ul> <p>就像上面看到的，如果单纯使用隐形绑定肯定没有办法得到期望的绑定的，幸好还可以在某些<strong>对象上强制调用函数，从而将<code>this</code>绑定在这个对象上。</strong></p> <p><strong>规则：可以通过<code>apply</code>、<code>call</code>、<code>bind</code>将函数中的<code>this</code>绑定到指定对象上。</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token comment">// 2</span>
+</code></pre></div><p>如果传入的不是对象，而是一个原始值（字符串、布尔类型、数字类型），来当做this的绑定对象，这个原始值会转换成它的对象形式。</p> <p>如果把<code>null</code>或者<code>undefined</code>作为this的绑定对象传入<code>call</code>/<code>apply</code>/<code>bind</code>，这些值会在调用时被忽略，实际应用的是默认绑定规则。</p> <ul><li><h3 id="new绑定"><a href="#new绑定" class="header-anchor">#</a> new绑定</h3></li></ul> <p><strong>new的时候会做哪些事情：</strong></p> <ol><li>创建一个全新的对象；</li> <li>这个新对象会被执行[[Prototype]]连接；</li> <li>这个新对象会绑定到函数调用的this；</li> <li>如果函数没有返回其他对象，那么new表达式中的函数调用会自动返回这个对象。</li></ol> <p><strong>规则：使用构造调用的时候，this会自动绑定到new期间创建的对象上。</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> bar <span class="token operator">=</span> Fn <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// 1</span>
+</code></pre></div><p>这里之所以对象bar可以点出函数Fn里面的a是因为new关键字可以改变this的指向，将这个this指向对象bar,为什么说bar是对象，因为用了new关键字就是创建一个对象实例。</p> <p><strong>当this碰到return时</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 例1</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fn</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+
+<span class="token comment">// 例2</span>
+<span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> bar1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fn1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar1<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+
+<span class="token comment">// 例3</span>
+<span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> bar2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fn2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar2<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// 1</span>
+
+<span class="token comment">// 例4</span>
+<span class="token keyword">function</span> <span class="token function">fn3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">undefined</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> bar3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fn3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar3<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// 1</span>
+</code></pre></div><p><strong>结论：如果返回值是一个对象，那么this指向的就是那个返回的对象，如果返回值不是一个对象那么this还是指向函数的实例。</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">undefined</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fn</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span> <span class="token comment">// fn { a: 1 }</span>
+</code></pre></div><p>还有一点就是虽然null也是对象，但在这里this还是指向那个函数的实例，因为null比较特殊。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span>
+  <span class="token keyword">return</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fn</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">// 1</span>
+</code></pre></div><h3 id="this四种绑定规则的优先级"><a href="#this四种绑定规则的优先级" class="header-anchor">#</a> this四种绑定规则的优先级</h3> <p>如果在某个调用位置应用了多条规则，如何确定哪条规则生效？</p> <div class="language-js extra-class"><pre class="language-js"><code>obj<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span> <span class="token comment">// this指向obj2 显式绑定比隐式绑定优先级高</span>
+<span class="token keyword">new</span> <span class="token class-name">obj<span class="token punctuation">.</span>foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// this指向new新创建的对象 new绑定比隐式绑定优先级高</span>
+</code></pre></div><p>显式绑定和new绑定无法直接比较（会报错），默认绑定是不应用其他规则之后的兜底绑定所以优先级最低，最后结果是：</p> <p><strong>显式绑定 &gt; 隐式绑定 &gt; 默认绑定</strong></p> <p><strong>new 绑定 &gt; 隐式绑定 &gt; 默认绑定</strong></p> <h2 id="箭头函数的this指向不会使用上述的四条规则"><a href="#箭头函数的this指向不会使用上述的四条规则" class="header-anchor">#</a> 箭头函数的this指向不会使用上述的四条规则：</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token operator">:</span> <span class="token number">22</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> bar <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span> <span class="token comment">// foo this指向obj1</span>
+<span class="token function">bar</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span> <span class="token comment">// 输入2 这里执行箭头函数 并试图绑定this指向到obj2</span>
+</code></pre></div><p>从以上可以得出，箭头函数的this规则：</p> <p><strong>1.箭头函数this继承于它外面第一个不是箭头函数的函数this指向。</strong></p> <p><strong>2.箭头函数的this一旦绑定的上下文，就不会被任何代码改变。</strong></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fontend/js/shallow-deep-copy.html" class="prev">
+        js深拷贝&amp;浅拷贝
+      </a></span> <span class="next"><a href="/fontend/js/arrow-function.html">
+        箭头函数
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6dbf240b.js" defer></script><script src="/assets/js/2.a990b21c.js" defer></script><script src="/assets/js/30.cbee3d24.js" defer></script>
+  </body>
+</html>

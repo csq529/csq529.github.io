@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>闭包 | 前端记录之路</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="专注前端技术栈分享记录">
+    <link rel="preload" href="/assets/css/0.styles.4fdd343e.css" as="style"><link rel="preload" href="/assets/js/app.6dbf240b.js" as="script"><link rel="preload" href="/assets/js/2.a990b21c.js" as="script"><link rel="preload" href="/assets/js/19.9f1eadf5.js" as="script"><link rel="prefetch" href="/assets/js/10.10c0b5aa.js"><link rel="prefetch" href="/assets/js/11.3d7f1001.js"><link rel="prefetch" href="/assets/js/12.e8ec263c.js"><link rel="prefetch" href="/assets/js/13.ccc4137c.js"><link rel="prefetch" href="/assets/js/14.17b7d498.js"><link rel="prefetch" href="/assets/js/15.a7d048e8.js"><link rel="prefetch" href="/assets/js/16.a4913ef6.js"><link rel="prefetch" href="/assets/js/17.72bfbdcb.js"><link rel="prefetch" href="/assets/js/18.77bc7de8.js"><link rel="prefetch" href="/assets/js/20.fc15fe08.js"><link rel="prefetch" href="/assets/js/21.6e5b9451.js"><link rel="prefetch" href="/assets/js/22.392cbf89.js"><link rel="prefetch" href="/assets/js/23.fd5708cf.js"><link rel="prefetch" href="/assets/js/24.8950b600.js"><link rel="prefetch" href="/assets/js/25.47fd4ae1.js"><link rel="prefetch" href="/assets/js/26.2d40bd1f.js"><link rel="prefetch" href="/assets/js/27.e8ceccaa.js"><link rel="prefetch" href="/assets/js/28.a88700d4.js"><link rel="prefetch" href="/assets/js/29.0f7738cb.js"><link rel="prefetch" href="/assets/js/3.da29dc3e.js"><link rel="prefetch" href="/assets/js/30.cbee3d24.js"><link rel="prefetch" href="/assets/js/31.1f03f940.js"><link rel="prefetch" href="/assets/js/32.25d8d086.js"><link rel="prefetch" href="/assets/js/33.416b6187.js"><link rel="prefetch" href="/assets/js/34.e5029e70.js"><link rel="prefetch" href="/assets/js/35.37a18c1c.js"><link rel="prefetch" href="/assets/js/4.1d9f8102.js"><link rel="prefetch" href="/assets/js/5.20b2e9c6.js"><link rel="prefetch" href="/assets/js/6.15bd08c2.js"><link rel="prefetch" href="/assets/js/7.fc57a01a.js"><link rel="prefetch" href="/assets/js/8.f2ae2ae7.js"><link rel="prefetch" href="/assets/js/9.771cbd28.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4fdd343e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端记录之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fontend/js/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/fontend/js/array-compare.html" class="sidebar-link">比较两个数组</a></li><li><a href="/fontend/js/array-methods.html" class="sidebar-link">JS数组中的一些实用方法</a></li><li><a href="/fontend/js/closure.html" aria-current="page" class="active sidebar-link">闭包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fontend/js/closure.html#闭包概念" class="sidebar-link">闭包概念</a></li><li class="sidebar-sub-header"><a href="/fontend/js/closure.html#闭包的作用" class="sidebar-link">闭包的作用</a></li><li class="sidebar-sub-header"><a href="/fontend/js/closure.html#闭包的应用场景" class="sidebar-link">闭包的应用场景</a></li></ul></li><li><a href="/fontend/js/cookies-localStorage-sessionStorage.html" class="sidebar-link">本地存储</a></li><li><a href="/fontend/js/inherit.html" class="sidebar-link">继承</a></li><li><a href="/fontend/js/methods.html" class="sidebar-link">js一些方法</a></li><li><a href="/fontend/js/prototype.html" class="sidebar-link">图解原型和原型链</a></li><li><a href="/fontend/js/scope.html" class="sidebar-link">作用域</a></li><li><a href="/fontend/js/shallow-deep-copy.html" class="sidebar-link">js深拷贝&amp;浅拷贝</a></li><li><a href="/fontend/js/this.html" class="sidebar-link">this指向</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="快速导航"><a href="#快速导航" class="header-anchor">#</a> 快速导航</h3> <div><ul><li><a href="/fontend/js/closure.html#快速导航">快速导航</a></li><li><a href="/fontend/js/closure.html#闭包概念">闭包概念</a></li><li><a href="/fontend/js/closure.html#闭包的作用">闭包的作用</a></li><li><a href="/fontend/js/closure.html#闭包的应用场景">闭包的应用场景</a></li></ul></div> <h2 id="闭包概念"><a href="#闭包概念" class="header-anchor">#</a> 闭包概念</h2> <p>闭包就是能够读取其他函数内部变量的函数。本质上，闭包就是将函数内部和函数外部连接起来的桥梁。</p> <h2 id="闭包的作用"><a href="#闭包的作用" class="header-anchor">#</a> 闭包的作用</h2> <ul><li>保存变量于内存中，避免全局变量的污染</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">outFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">function</span> <span class="token function">insideFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">++</span>count
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> insideFn
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> fn <span class="token operator">=</span> <span class="token function">outFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 2</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 3</span>
+</code></pre></div><ul><li>在函数外部读取函数内部的变量</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'csq'</span>
+<span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">18</span>
+  <span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> sex <span class="token operator">=</span> <span class="token string">'男'</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> sex<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> fn2
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> fn <span class="token operator">=</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// csq 18 男</span>
+</code></pre></div><ul><li>对外提供共有属性和方法</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">parentFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'csq'</span>
+      age <span class="token operator">=</span> <span class="token number">18</span>
+      obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">,</span>
+        age<span class="token punctuation">,</span>
+        <span class="token function">allInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            name<span class="token punctuation">,</span>
+            age
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> obj<span class="token punctuation">.</span>allInfo
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> fn <span class="token operator">=</span> <span class="token function">parentFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// { name: 'csq', age: 18 }</span>
+</code></pre></div><h2 id="闭包的应用场景"><a href="#闭包的应用场景" class="header-anchor">#</a> 闭包的应用场景</h2> <p>循环中找到对应的元素的索引js代码</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/*
+*原本是想点击哪个按钮，正确的显示对应哪个按钮元素的索引值，但是无论点击哪个按钮都是最后一个索引。
+*错误原因是：因为for循环执行的速度很快，执行结束后，变量i的值已经变成了最后一项，所以当点击事件执行时，读取的信息总是最后一项
+*/</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> btns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    btns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// 3 3 3</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// html代码</span>
+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;按钮1&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;按钮2&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;按钮3&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre></div><p>解决方法1：使用匿名函数自执行</p> <div class="language-js extra-class"><pre class="language-js"><code>windiw<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> btns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      btns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// 0 1 2</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>解决方法2：使用let</p> <div class="language-js extra-class"><pre class="language-js"><code>window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> btns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    btns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// 0 1 2 </span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fontend/js/array-methods.html" class="prev">
+        JS数组中的一些实用方法
+      </a></span> <span class="next"><a href="/fontend/js/cookies-localStorage-sessionStorage.html">
+        本地存储
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6dbf240b.js" defer></script><script src="/assets/js/2.a990b21c.js" defer></script><script src="/assets/js/19.9f1eadf5.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一些常用的正则方法 | 前端记录之路</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="专注前端技术栈分享记录">
+    <link rel="preload" href="/assets/css/0.styles.4fdd343e.css" as="style"><link rel="preload" href="/assets/js/app.6dbf240b.js" as="script"><link rel="preload" href="/assets/js/2.a990b21c.js" as="script"><link rel="preload" href="/assets/js/26.2d40bd1f.js" as="script"><link rel="prefetch" href="/assets/js/10.10c0b5aa.js"><link rel="prefetch" href="/assets/js/11.3d7f1001.js"><link rel="prefetch" href="/assets/js/12.e8ec263c.js"><link rel="prefetch" href="/assets/js/13.ccc4137c.js"><link rel="prefetch" href="/assets/js/14.17b7d498.js"><link rel="prefetch" href="/assets/js/15.a7d048e8.js"><link rel="prefetch" href="/assets/js/16.a4913ef6.js"><link rel="prefetch" href="/assets/js/17.72bfbdcb.js"><link rel="prefetch" href="/assets/js/18.77bc7de8.js"><link rel="prefetch" href="/assets/js/19.9f1eadf5.js"><link rel="prefetch" href="/assets/js/20.fc15fe08.js"><link rel="prefetch" href="/assets/js/21.6e5b9451.js"><link rel="prefetch" href="/assets/js/22.392cbf89.js"><link rel="prefetch" href="/assets/js/23.fd5708cf.js"><link rel="prefetch" href="/assets/js/24.8950b600.js"><link rel="prefetch" href="/assets/js/25.47fd4ae1.js"><link rel="prefetch" href="/assets/js/27.e8ceccaa.js"><link rel="prefetch" href="/assets/js/28.a88700d4.js"><link rel="prefetch" href="/assets/js/29.0f7738cb.js"><link rel="prefetch" href="/assets/js/3.da29dc3e.js"><link rel="prefetch" href="/assets/js/30.cbee3d24.js"><link rel="prefetch" href="/assets/js/31.1f03f940.js"><link rel="prefetch" href="/assets/js/32.25d8d086.js"><link rel="prefetch" href="/assets/js/33.416b6187.js"><link rel="prefetch" href="/assets/js/34.e5029e70.js"><link rel="prefetch" href="/assets/js/35.37a18c1c.js"><link rel="prefetch" href="/assets/js/4.1d9f8102.js"><link rel="prefetch" href="/assets/js/5.20b2e9c6.js"><link rel="prefetch" href="/assets/js/6.15bd08c2.js"><link rel="prefetch" href="/assets/js/7.fc57a01a.js"><link rel="prefetch" href="/assets/js/8.f2ae2ae7.js"><link rel="prefetch" href="/assets/js/9.771cbd28.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4fdd343e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端记录之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/js/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/calculation/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frame/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>正则</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fontend/js/reg.html" aria-current="page" class="active sidebar-link">一些常用的正则方法</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="快速导航"><a href="#快速导航" class="header-anchor">#</a> 快速导航</h3> <div><ul><li><a href="/fontend/js/reg.html#快速导航">快速导航</a></li></ul></div> <h4 id="一、空格相关"><a href="#一、空格相关" class="header-anchor">#</a> 一、空格相关</h4> <ul><li>去除左右两边的空格</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">' abc '</span>
+str <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(^\s*)|(\s*$)/g</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>去除左边的空格</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">' abc '</span>
+str <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(^\s*)/g</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>去除右边的空格</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">' abc '</span>
+str <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(\s*$)/g</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fontend/js/variable-destruct-assign.html" class="prev">
+        变量的结构赋值
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6dbf240b.js" defer></script><script src="/assets/js/2.a990b21c.js" defer></script><script src="/assets/js/26.2d40bd1f.js" defer></script>
+  </body>
+</html>
